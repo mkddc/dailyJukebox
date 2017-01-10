@@ -1,0 +1,77 @@
+.blocInfoVid{
+	position: relative;
+	top:100%;
+	/*Afin de garder l'élément centré */
+		/* (relatif à la largeur parent) : */
+	left: 50%;
+		/* (relatif à la largeur du player) : */
+	transform: translate(-50%,0);
+	/* FIN */
+	width: 99%;
+}
+/* FIN */
+	.metaInfos1{
+		/* Pour que l'image passe en dessous : */
+		overflow: hidden;
+	}
+		.titre{
+			float: left;
+			width: 70%;
+			font-size: 2.4rem;
+		}
+		.nbVues{
+			float: right;
+			font-size: 2rem;
+		}
+	.metaInfos2{
+		height: 6rem;
+	}
+		.avatar{
+			position: absolute;
+			margin-right: 1rem;
+		}
+		.compte{
+			position: relative;
+			top: 0.5rem;
+			left: 7rem;
+			font-size: 1.8rem;
+		}
+		.pays{
+			position: absolute;
+			left: 7rem;
+			font-size: 1.8rem;
+			float: right
+		}
+
+/* Gestion de la page pour des écrans > 1280px de largeur : */
+@media (min-width: 1280px) {
+	.blocInfoVid{
+		position: absolute;
+		width: 1280px;
+		top: 78rem;
+	}
+}
+
+/* Gestion de la taille des polices du bloc info pour < 720px */
+/* Diminution par un rapport de 0.7 aux dimensions plus haut */
+@media (max-width: 720px) {
+	.titre{
+		font-size: 1.68rem;
+	}
+	.nbVues{
+		font-size: 1.4rem;
+	}
+	.avatar{
+		width:42px;
+		height:42px;
+	}
+	.compte{
+		font-size: 1.26rem;
+		top: 0.35rem;
+		left:4.9rem;
+	}
+	.pays{
+		font-size: 1.26rem;
+		left: 4.9rem;
+	}
+}

@@ -1,0 +1,19 @@
+#channelChoice{
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	height: 4.5rem;
+	width: 24.5rem;
+	margin-right: 0.5rem;
+	font-size: 1.6rem;
+}
+
+@media (max-width: 510px) {
+	#channelChoice{
+		height: 4.5rem;
+		width: 100%;
+		font-size: 1.6rem;
+	}
+}

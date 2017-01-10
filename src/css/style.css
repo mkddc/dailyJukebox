@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html{
+	font: 16px sans-serif;
+	font-size: 62.5%; /* 10px */
+}
+
+a{
+	text-decoration: none;
+}
+		
+
+

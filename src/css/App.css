@@ -1,0 +1,108 @@
+.navBar{
+	height: 4.6rem;
+	margin: 0 0 1rem 0;
+	padding: 0;
+	padding-left: 6.1rem;
+	background-color: #0066DC;
+}
+.title{
+	font-family: 'Nunito';
+	font-size: 2.2rem;
+	font-weight: 700;
+	line-height: 4.6rem;
+	text-align: left;
+	color: #fff;
+	text-decoration: none;
+}
+.title:hover{
+	text-decoration: none;
+	color: #ccc;
+}
+.title:active{
+	text-decoration: none;
+	color: #fff;
+}
+.title:visited{
+	color: #fff;
+	text-decoration: none;
+}
+.title:link{
+	color: #fff;
+	text-decoration: none;
+}
+
+/* Pour rendre le player responsive : */
+.videoWrapper{
+	position: relative;
+	/* Technique du padding-bottom */
+	/* Ici, le rapport 56.25% correpond à 9/16 = height/width, 
+		pour avoir 16/9e */
+	padding-bottom: 56.25%; 
+	height: 0;
+}
+	.videoWrapper iframe {
+		position: absolute;
+		margin: 0;
+		z-index: 1;
+		top: 0;
+		width: 99%;
+		max-width: 1280px;
+		height: 99%;
+		max-height: 720px; 
+		/* Afin de garder l'élément absolute centré : */
+		/* (relatif à la largeur parent) : */
+		left: 50%;
+		/* (relatif à la largeur du player) : */
+		transform: translate(-50%,0);
+		/* FIN */ 
+	}
+	/* On cherche à annuler le translate précédent (ecran décalé en fullscreen) */
+	/* Le left, lui, est mis à jour à 0 (user agent stylesheet) */
+	.videoWrapper iframe:-webkit-full-screen{
+		transform: translate(0%,0);
+	}
+	.videoWrapper iframe:-moz-full-screen{
+		transform: translate(0%,0);
+	}
+	.videoWrapper iframe:-ms-full-screen{
+		transform: translate(0%,0);
+	}
+	.videoWrapper iframe:fullscreen{
+		transform: translate(0%,0);
+	}
+
+.jukeBlock{
+	position: relative;
+	/* Pour bien centrer l'élément : */
+	left: 50%;
+	transform: translate(-50%,0);
+	top: 0.5rem;
+	width: 50rem;
+}
+
+/* Gestion de la page pour des écrans > 1280px de largeur : */
+@media (min-width: 1280px) {
+		.videoWrapper iframe {
+			/* On fixe la taille du player: */
+			width: 1280px;
+			height: 720px;
+		}
+
+	.jukeBlock{
+		position: absolute;
+		top: 87.5rem;
+	}
+}
+
+/* Gestion des boutons du bloc jukeBlock pour < 510 */
+/* Diminution par un rapport de 0.7 aux dimensions plus haut */
+@media (max-width: 510px) {
+	.jukeBlock{
+		position: relative;
+		/* Pour bien centrer l'élément : */
+		left: 50%;
+		transform: translate(-50%,0);
+		top: 0.5rem;
+		width: 60%;
+	}
+}

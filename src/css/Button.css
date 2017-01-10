@@ -1,0 +1,26 @@
+#randomBtn{
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	height: 4.5rem;
+	width: 24.5rem;
+	margin-left: 0.5rem;
+	font-size: 1.6rem;
+	font-weight: bold;
+	background-color: #0066DC;
+}
+
+/* Gestion des boutons du bloc jukeBlock pour < 510 */
+/* Diminution par un rapport de 0.7 aux dimensions plus haut */
+@media (max-width: 510px) {
+	#randomBtn{
+		height: 4.5rem;
+		width: 100%;
+		font-size: 1.6rem;
+		top: 5rem;
+
+		font-weight: bold;
+		background-color: #0066DC;
+	}
+}

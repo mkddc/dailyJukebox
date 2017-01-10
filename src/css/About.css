@@ -1,0 +1,56 @@
+/* Gestion de la fenêtre modale 'A propos' : */
+#aboutLink{
+	position: absolute;
+	right: 6rem;
+	font-size: 1.8rem;
+	line-height: 4.6rem;
+	color: #fff;
+	text-decoration: none;
+}
+#aboutLink:hover{
+	color: #ccc;
+}
+.myModal{
+	position: fixed;
+	z-index: 10000;
+	top: 20%;
+	right: 15%;
+	bottom: 30%;
+	left: 15%;
+	color: #FFF;
+	background-color: rgba(0, 102, 220, 0.9);
+	border-radius: 1rem;
+	opacity:0;
+	-webkit-transition: opacity 300ms ease-in;
+	-moz-transition: opacity 300ms ease-in;
+	transition: opacity 300ms ease-in;
+	pointer-events: none;
+}
+
+.myModal:target{
+	opacity: 1;
+	pointer-events: auto;
+}
+#aboutTitle{
+	text-align: center;
+	margin-bottom: 10rem;
+}
+#aboutText{
+	position: relative;
+	width: 80%;
+	left: 50%;
+	transform: translate(-50%,0);
+}
+.closeAbout{
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	padding: 0.5rem;
+	opacity: 1;
+	font-size: 1.5rem;
+	color: #fff;
+}
+.closeAbout:hover{
+	text-decoration: none;
+	color: #ccc;
+}

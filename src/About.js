@@ -11,7 +11,9 @@ var About = React.createClass({
 			    <div id="aboutText">
 			    	<p>DailyJukebox est une interface permettant de parcourir, par catégorie Dailymotion, les 100 vidéos les plus tendances du moment. Les contenus sélectionnés par l'interface sont exclusivement en français ou en anglais.
 			    	</p>
-			    	<p>En arrivant sur l'interface, la première chargée par défaut est la vidéo la plus récente mise en ligne par le compte officiel Dailymotion. Pour commencer :
+			    	<p>En arrivant sur l'interface, la vidéo chargée par défaut est la vidéo la plus récente mise en ligne par le compte officiel Dailymotion.
+			    	</p>
+			    	<p>Pour commencer :
 			    	</p>
 			    	<p>1 - Choisir la catégorie
 					</p>
